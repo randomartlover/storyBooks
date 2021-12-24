@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const exphbs = require('express-handlebars');
+const path = require('path');
 const connectDb = require('./config/db');
 const routes = require('./routes/index');
 
@@ -23,6 +24,9 @@ if (process.env.NODE_ENV === "development"){
 const handlebars = exphbs.create({ extname: '.hbs' });
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
+
+//Static folders
+app.use(express.static(path.join(__dirname + '/public')))
 
 //Routes
 app.use('/', routes)
