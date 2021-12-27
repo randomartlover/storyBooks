@@ -43,14 +43,23 @@ require('./config/passport')(passport);
 app.use(passport.initialize())
 app.use(passport.session())
 
-//Handlebars Helper
-const { formatDate } = require('./helpers/hbs')
+// Set global var
+app.use((req, res, next)=> {
+  res.locals.user = req.user || null;
+  next()
+})
 
-//Handlebars
+// Handlebars Helper
+const { formatDate, truncate, stripTags, editIcon } = require('./helpers/hbs')
+
+// Handlebars
 const handlebars = exphbs.create({
   extname: '.hbs',
   helpers: {
-    formatDate
+    formatDate,
+    truncate,
+    stripTags,
+    editIcon
   },
   defaultLayout: 'main'
 });
