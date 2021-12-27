@@ -43,8 +43,17 @@ require('./config/passport')(passport);
 app.use(passport.initialize())
 app.use(passport.session())
 
+//Handlebars Helper
+const { formatDate } = require('./helpers/hbs')
+
 //Handlebars
-const handlebars = exphbs.create({ extname: '.hbs' });
+const handlebars = exphbs.create({
+  extname: '.hbs',
+  helpers: {
+    formatDate
+  },
+  defaultLayout: 'main'
+});
 app.engine('.hbs', handlebars.engine);
 app.set('view engine', '.hbs');
 
