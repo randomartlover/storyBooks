@@ -23,3 +23,8 @@ p {
 .story-body-height {
   min-height: 113px;
 }
+
+.btn-float {
+  float: left;
+  margin-right: 10px;
+}

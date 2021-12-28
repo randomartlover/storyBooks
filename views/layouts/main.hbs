@@ -24,19 +24,20 @@
   <script>
     M.Sidenav.init(document.querySelector('.sidenav'));
     M.FormSelect.init(document.querySelector('#status'));
-
-    CKEDITOR.replace('body', {
-      // Define the toolbar groups as it is a more accessible solution.
-      toolbarGroups: [{
-        "name": "basicstyles",
-        "groups": ["basicstyles"]
-      },
-        {
-        "name": "links",
-        "groups": ["links"]
-      }
-      ],
-    });
+    if (document.getElementById("body")){
+      CKEDITOR.replace('body', {
+        // Define the toolbar groups as it is a more accessible solution.
+        toolbarGroups: [{
+          "name": "basicstyles",
+          "groups": ["basicstyles"]
+        },
+          {
+          "name": "links",
+          "groups": ["links"]
+        }
+        ],
+      });
+    }
   </script>
 </body>
 </html>
