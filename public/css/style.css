@@ -19,3 +19,7 @@ p {
 .fa-small {
   font-size: 16px !important;
 }
+
+.story-body-height {
+  min-height: 113px;
+}

@@ -50,7 +50,7 @@ app.use((req, res, next)=> {
 })
 
 // Handlebars Helper
-const { formatDate, truncate, stripTags, editIcon } = require('./helpers/hbs')
+const { formatDate, truncate, stripTags, editIcon, select } = require('./helpers/hbs')
 
 // Handlebars
 const handlebars = exphbs.create({
@@ -59,7 +59,8 @@ const handlebars = exphbs.create({
     formatDate,
     truncate,
     stripTags,
-    editIcon
+    editIcon,
+    select
   },
   defaultLayout: 'main'
 });
