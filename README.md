@@ -1,26 +1,19 @@
-# Welcome to StoryBooks ! 
-StoryBooks is a node.js application used to track your stories with feature to make stories public or private.
 
-<img src="https://drive.google.com/uc?export=view&id=1785kifpmMi5py7OZNIBfgp_XHthpAj42" alt="login" />
-<br/>
-<br/>
-<img src="https://drive.google.com/uc?export=view&id=1XJ2mtjcBgyzq6iIMiP8D0a-cKUqVOdvu" alt="add story" />
-<br/>
-<br/>
-<img src="https://drive.google.com/uc?export=view&id=1W_A69LGq-0SKor0m620j002wXhQokpQr" alt="public stories" />
+# Welcome to StoryBooks ! 
+Create public and private stories from your life. It is a node.js application using google authentication, with all CRUD actions implemented.
+StoryBooks helps keep track of your life stories with features to make stories public or private.
+
+<img src="https://drive.google.com/uc?export=view&id=1CMrMGXyQOZOxB8zhVTd2Aa1AcdhHTrI_" alt="add story" />
 
 ## Features
 - User login by google authO
-- Add stories
+- Add, view, edit and delete stories
 - Make stories public or private
 - View all public stories on platform
 <br/>
 
 **Coming soon..**
-
- - Edit stories
- - Delete Stories
- - View single story
+- Tags for grouping stories
 
 ## Tech Stack and dependencies
  - node.js
@@ -51,6 +44,3 @@ StoryBooks is a node.js application used to track your stories with feature to m
 ## Run application
 
 `npm run dev`
-
-## View deployed application
-**Coming soon...**
